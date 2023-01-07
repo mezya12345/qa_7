@@ -2,54 +2,38 @@ package ru.mail;
 
 public class Main {
     public static void main(String[] args) {
-        //целые числа
-        byte varByte = 1; // -128 ... 127
-        short varShort = 1; //-32768 ... 32767
-        //must have
-        int varInt = 1;
-        long varLong = 1L;
+        byte varByte1 = -128;
+        System.out.println((byte) (varByte1 - 1));
 
-        //числа с плавающей точкой
-        float varFloat = 0.0f;
-        //must have
-        double varDouble = 0.0d;
+        short varShort1 = 32767;
+        System.out.println((short) (varShort1 + 1));
 
-        //логический
-        boolean varBool = true;
+        int varInt1 = 2147483647;
+        System.out.println(varInt1 + 1);
 
-        //символьный
-        char varChar = 'с';
+        long varLong1 = -9223372036854775808L;
+        System.out.println(varLong1 - 1L);
 
-        //ссылочные (объектные) типы данных - классы
-        String varString = "Hello, qa.guru";
+        float varFloat1 = Float.MAX_VALUE;
+        System.out.println(varFloat1 + varFloat1);
 
-        //ОПЕРАТОРЫ
-        //1. Присвоения
-        int varInt0 = 0;
-        int varInt0 += 10; //используется в краткой форме редко
+        double varDouble1 = Double.MAX_VALUE;
+        System.out.println(- varDouble1 - varDouble1);
 
-        //2. Математические (+, -, *, /, %, ++, --)
-        varInt0 = 7 / 4; //в java деление - целочисленное, то есть остаток будет выброшен
-        varInt0 = 7 % 4; //остаток от деления, тут 3
-        varInt0 = ++varInt; //префиксная запись инкремента
-        varInt0 = varInt--; //постфиксная запись декремента
-
-        //3. Сравнения (>, <, >=, <=, !=, ==)
-        if (1 == 1) // не используется для ссылочных типов
-
-        //4. Логические операторы (И &&, ИЛИ ||, не !)
-        if ((age >= 30) && (sex.equals("female")))
-        if (!((age >= 30) && (sex.equals("female")))) //изменяет true на false
-
-        if (varString != null && varString.length() == 10) {
-            System.out.println(varString);
+        char varChar1 = 'k';
+        if (varChar1 == 'u') {
+            System.out.println("Буква u");
         } else {
-            System.out.println("Извините, строка не из 10 символов");
+            System.out.println("Что-то другое");
         }
 
+        System.out.println(varShort1 < varInt1);
 
-
-        System.out.println("Hello, qa.guru");
-
+        int varInt2 = 100;
+        double varDouble2 = 10.1d;
+        System.out.println(varInt2 + varDouble2);
+        System.out.println(varInt2 - varDouble2);
+        System.out.println(varInt2 * varDouble2);
+        System.out.println(varInt2 / varDouble2);
     }
 }
