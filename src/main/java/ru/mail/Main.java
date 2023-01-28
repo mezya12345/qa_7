@@ -1,39 +1,26 @@
 package ru.mail;
 
+import ru.mail.data.Card;
+import ru.mail.data.MasterCard;
+import ru.mail.data.VisaCard;
+
+import static ru.mail.data.Country.RU;
+
 public class Main {
+//    public static void main(String[] args) {
+//        Card visaCard = new VisaCard();
+//        visaCard.setBalance(100);
+//        visaCard.payCountry(RU, 75);
+//        System.out.println(visaCard.getBalance());
+//    }
+
     public static void main(String[] args) {
-        byte varByte1 = -128;
-        System.out.println((byte) (varByte1 - 1));
+        invoke(new MasterCard());
+    }
 
-        short varShort1 = 32767;
-        System.out.println((short) (varShort1 + 1));
-
-        int varInt1 = 2147483647;
-        System.out.println(varInt1 + 1);
-
-        long varLong1 = -9223372036854775808L;
-        System.out.println(varLong1 - 1L);
-
-        float varFloat1 = Float.MAX_VALUE;
-        System.out.println(varFloat1 + varFloat1);
-
-        double varDouble1 = Double.MAX_VALUE;
-        System.out.println(- varDouble1 - varDouble1);
-
-        char varChar1 = 'k';
-        if (varChar1 == 'u') {
-            System.out.println("Буква u");
-        } else {
-            System.out.println("Что-то другое");
-        }
-
-        System.out.println(varShort1 < varInt1);
-
-        int varInt2 = 100;
-        double varDouble2 = 10.1d;
-        System.out.println(varInt2 + varDouble2);
-        System.out.println(varInt2 - varDouble2);
-        System.out.println(varInt2 * varDouble2);
-        System.out.println(varInt2 / varDouble2);
+    public static void invoke(Card card) {
+        card.setBalance(100);
+        card.payCountry(RU, 75);
+        System.out.println(card.getBalance());
     }
 }
